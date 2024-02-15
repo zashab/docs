@@ -453,8 +453,8 @@ void DoBatchWork(ActivityContext[] requestContexts)
 }
 ```
 
-Unlike events and Tags that can be added on-demand, links must be added during StartActivity() and
+Unlike events and Tags that can be added on-demand, links must be added during `StartActivity()` and
 are immutable afterwards.
 
 > [!IMPORTANT]  
-> According to the [OpenTelemetry specification](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/sdk.md#span-limits), the number of links is capped at 128 by default.
+> As per the [OpenTelemetry Specification](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/sdk.md#span-limits), the suggested limit for the number of links is 128. However, it's important to note that this limit is not enforced.
